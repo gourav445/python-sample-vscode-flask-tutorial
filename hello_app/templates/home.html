@@ -5,6 +5,19 @@ Home
 {% block content %}
 <p>AVS Sizing Calculator</p>
 Adding elements to Body
-
+div_container = document.createElement('div')
+div_container.innerHTML = """
+  <br><br>
+  mu:
+  <input id='mu' value='1' type="number">
+  <br><br>
+  sigma:
+  <input id='sigma' value='1' type="number">
+  <br><br>
+  <button onclick='pyodide.globals.generate_plot_img()'>Plot</button>
+  <br>
+  <img id="fig" />
+"""
+document.body.appendChild(div_container)
 
 {% endblock %}
