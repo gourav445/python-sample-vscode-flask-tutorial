@@ -5,7 +5,7 @@ Home
 {% block content %}
 <p>AVS Sizing Calculator</p>
 
-div_container.innerHTML = """
+
   <br><br>
   mu:
   <input id='mu' value='1' type="number">
@@ -16,6 +16,6 @@ div_container.innerHTML = """
   <button onclick='pyodide.globals.generate_plot_img()'>Plot</button>
   <br>
   <img id="fig" />
-"""
+
 
 {% endblock %}
