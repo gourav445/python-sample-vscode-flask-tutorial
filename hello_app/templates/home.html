@@ -5,10 +5,9 @@ Home
 {% block content %}
 <p>AVS Sizing Calculator.</p>
 <body>
-    {%if name %}
-        <span class="message">Hello there, {{ name }}!</span> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
-    {% else %}
-        <span class="message">What's your name? Provide it after /hello/ in the URL.</span>
-    {% endif %}
+    
+        <span class="message">Hello there </span> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
+    
+    
 </body>
 {% endblock %}
