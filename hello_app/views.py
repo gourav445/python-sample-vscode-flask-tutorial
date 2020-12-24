@@ -5,6 +5,7 @@ from . import app
 @app.route("/")
 def home():
     return render_template("home.html")
+    <span class="message">Hello there!</span> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.  
 
 @app.route("/about/")
 def about():
