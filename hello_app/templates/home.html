@@ -5,9 +5,17 @@ Home
 {% block content %}
 <p>AVS Sizing Calculator</p>
 
+  {% macro input(name, value='', type='text', size=20) -%}
+  <input type="{{ type }}" name="{{ name }}" value="{{
+      value|e }}" size="{{ size }}">
+  {%- endmacro %}
+
+
+<p>{{ input('password', type='password') }}</p>
+
   <br><br>
   Number of Virtual Machines:
-  <input id='VM' value='1' type="number">
+  <p>{{ input('username') }}</p>
   <br><br>
   vCPU per Virtual Machine:
   <input id='vcpu' value='1' type="number">
@@ -22,12 +30,5 @@ Home
   <br>
   <img id="fig" />
 
-  {% macro input(name, value='', type='text', size=20) -%}
-  <input type="{{ type }}" name="{{ name }}" value="{{
-      value|e }}" size="{{ size }}">
-  {%- endmacro %}
-
-<p>{{ input('username') }}</p>
-<p>{{ input('password', type='password') }}</p>
 
 {% endblock %}
