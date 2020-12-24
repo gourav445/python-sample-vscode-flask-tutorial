@@ -5,9 +5,8 @@ Home
 {% block content %}
 <p>AVS Sizing Calculator.</p>
 <body>
-    
-        <span class="message">Hello there </span> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
-    
+    date=datetime.now()
+     It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
     
 </body>
 {% endblock %}
