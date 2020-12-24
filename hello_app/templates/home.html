@@ -5,13 +5,15 @@ Home
 {% block content %}
 <p>AVS Sizing Calculator</p>
 
-
   <br><br>
-  mu:
-  <input id='mu' value='1' type="number">
+  Number of Virtual Machines:
+  <input id='VM' value='1' type="number">
   <br><br>
-  sigma:
-  <input id='sigma' value='1' type="number">
+  vCPU per Virtual Machine:
+  <input id='vcpu' value='1' type="number">
+  <br><br>
+  Memory per Virtual Machine:
+  <input id='mem' value='1' type="number">
   <br><br>
   <button onclick='pyodide.globals.generate_plot_img()'>Plot</button>
   <br>
