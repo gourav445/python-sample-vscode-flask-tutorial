@@ -4,13 +4,7 @@ from . import app
 
 @app.route("/")
 def home():
-#    return render_template("home.html")
-def hello_there(name = Gourav):
-    return render_template(
-        "hello_there.html",
-        name=name,
-        date=datetime.now()
-    ) 
+    return render_template("home.html")
 
 @app.route("/about/")
 def about():
