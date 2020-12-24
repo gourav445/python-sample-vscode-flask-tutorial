@@ -6,4 +6,13 @@ Home
 <p>AVS Sizing Calculator</p>
 Adding elements to Body
 
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run()
+
 {% endblock %}
