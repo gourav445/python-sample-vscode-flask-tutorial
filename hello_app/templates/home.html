@@ -4,7 +4,7 @@ Home
 {% endblock %}
 {% block content %}
 <p>AVS Sizing Calculator</p>
-console.log(pyodide.runPython('import sys; sys.version'))
+
   <br><br>
   Number of Virtual Machines:
   <input id='VM' value='1' type="number">
@@ -22,5 +22,15 @@ console.log(pyodide.runPython('import sys; sys.version'))
   <br>
   <img id="fig" />
 
+{% endblock %}
+{% macro input(name, value='', type='text', size=20) -%}
+    <input type="{{ type }}" name="{{ name }}" value="{{
+        value|e }}" size="{{ size }}">
+{%- endmacro %}
+
+{% block content %}
+
+<p>{{ input('username') }}</p>
+<p>{{ input('password', type='password') }}</p>
 
 {% endblock %}
