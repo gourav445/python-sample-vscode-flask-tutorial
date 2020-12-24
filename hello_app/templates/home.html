@@ -4,13 +4,16 @@ Home
 {% endblock %}
 {% block content %}
 <p>AVS Sizing Calculator</p>
-
+console.log(pyodide.runPython('import sys; sys.version'))
   <br><br>
   Number of Virtual Machines:
   <input id='VM' value='1' type="number">
   <br><br>
   vCPU per Virtual Machine:
   <input id='vcpu' value='1' type="number">
+  <br><br>
+  Stroage per Virtual Machine:
+  <input id='storage' value='1' type="number">
   <br><br>
   Memory per Virtual Machine:
   <input id='mem' value='1' type="number">
