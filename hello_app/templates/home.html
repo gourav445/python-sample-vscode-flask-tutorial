@@ -11,20 +11,14 @@ Home
   {%- endmacro %}
 
 
-<p>{{ input('password', type='password') }}</p>
-
   <br><br>
-  Number of Virtual Machines:
-  <p>{{ input('username') }}</p>
+  <p>>Number of Virtual Machines: {{ input('vm') }}</p>
   <br><br>
-  vCPU per Virtual Machine:
-  <input id='vcpu' value='1' type="number">
+  vCPU per Virtual Machine {{ input('vCPU') }}:
   <br><br>
-  Stroage per Virtual Machine:
-  <input id='storage' value='1' type="number">
+  Storage per Virtual Machine: {{ input('Storage') }}
   <br><br>
-  Memory per Virtual Machine:
-  <input id='mem' value='1' type="number">
+  Memory per Virtual Machine: {{ input('Memory') }}
   <br><br>
   <button onclick='pyodide.globals.generate_plot_img()'>Generate Recommendation</button>
   <br>
